@@ -1,13 +1,13 @@
 class Solution:
     def removeOuterParentheses(self, s: str) -> str:
-        r,o="",0
+        r,o=[],0
         for e in s:
             if e=="(" and o > 0:
-                r=r+e
+                r.append(e)
             if e==")" and o > 1:
-                r=r+e
+                r.append(e)
             o+=1 if e=="(" else -1
-        return r
+        return "".join(r)
 
             
         
