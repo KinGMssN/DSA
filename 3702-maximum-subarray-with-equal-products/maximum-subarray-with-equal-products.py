@@ -10,8 +10,8 @@ class Solution:
                 pv//=nums[i]
                 i+=1
             pv*=nums[j]
-            m1=max(m1,j-i+1)
             j+=1
+            m1=max(m1,j-i)
             
         return m1
 
